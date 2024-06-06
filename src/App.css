@@ -1,38 +1,229 @@
-.App {
-  text-align: center;
+:root {
+  --primary-bg: #070709;
+  --btn-bg: #f05a43;
+  --btn-border: #aeaeae;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: neo-med;
+  src: url(./assets/fonts/NeueHaasDisplayMediu.ttf);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: neo-light;
+  src: url(./assets/fonts/NeueHaasDisplayLight.ttf);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: neo-bold;
+  src: url(./assets/fonts/NeueHaasDisplayBold.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "neo-med" serif;
+}
+
+.nav-button {
+  background-color: var(--btn-bg);
+  padding: 5px 10px;
+  font-size: 18px;
+  position: relative;
+}
+
+/* .nav-button::after {
+  position: absolute;
+  content: '';
+  border: 1px solid var(--btn-border);
+  width: 100%;
+  height: 100%;
+  bottom: -5px;
+  left: 5px;
+  z-index: -1;
+} */
+
+.hero-sec {
+  background-color: var(--primary-bg);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  color: #fff;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-sec::after {
+  position: absolute;
+  content: '';
+  background: linear-gradient(90deg,
+      rgba(247, 147, 38, 1) 0%,
+      rgba(240, 98, 61, 1) 20%,
+      rgba(239, 70, 79, 1) 40%,
+      rgba(238, 60, 86, 1) 60%,
+      rgba(236, 27, 110, 1) 80%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(80px);
+  width: 80%;
+  height: 50px;
+  margin: 0 10%;
+  bottom: 0;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  overflow: hidden;
+
 }
 
-@keyframes App-logo-spin {
-  from {
+.hero-sec h1 {
+  width: 80%;
+  text-align: center;
+  font-size: 50px;
+  font-family: "neo-bold" serif !important;
+}
+
+.hero-sec h3 {
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.text-clr {
+  background: linear-gradient(90deg,
+      rgba(247, 147, 38, 1) 0%,
+      rgba(240, 98, 61, 1) 20%,
+      rgba(239, 70, 79, 1) 40%,
+      rgba(238, 60, 86, 1) 60%,
+      rgba(236, 27, 110, 1) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* =================ousr vesion============= */
+.our-vesion {
+  background-color: var(--primary-bg);
+  height: 100vh;
+  padding: 30px 0;
+  position: relative;
+}
+
+.center-title {
+  color: var(--btn-border);
+  position: relative;
+  font-family: "neo-light" serif !important;
+  width: fit-content;
+  padding: 5px 0;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.center-title::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  width: 60%;
+  margin: 0 20%;
+  height: 1px;
+  left: 0;
+  background-color: var(--btn-border);
+}
+.our-vision-content{
+  color: #fff;
+  height: 80vh;
+  display: flex;
+  align-items: self-start;
+  justify-content:center;
+  flex-direction: column;
+  gap: 20px;
+}
+.our-vision-content h2{
+  width: 50%;
+  font-size: 50px;
+}
+.our-vision-content p{
+  width: 65%;
+  line-height: 35px;
+}
+.arrow-rot{
+  transform: rotate(-30deg) !important;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.vison-ele{
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+.ele{
+  width: 200px;
+  height: 200px;
+  animation: rotate 15s infinite;
+  transition: 5s ease-in-out;
+}
+
+@keyframes rotate {
+  0%{
     transform: rotate(0deg);
   }
-  to {
+  100%{
     transform: rotate(360deg);
   }
+}
+
+/* ============experince sec==== */
+
+.experince-sec{
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.exp-content{
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+  height: 80%;
+  width: 100%;
+}
+.exp-text{
+  width: 50%;
+  color: #1a1616;
+  padding:50px 0 0 100px;
+}
+
+.exp-text h2{
+  width:70%;
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+.exp-text p{
+  width: 70%;
+}
+.exp-img{
+  width: 50%;
+  position: relative;
+  right:0;
+}
+.exp-img img{
+ height: 70vh;
+ width: 100%;
+ object-fit: contain;
+ position: absolute;
+ right: 0;
+}
+
+.exp-ele{
+  position: absolute;
+  bottom: 20px;
+  left: -10px;
 }
