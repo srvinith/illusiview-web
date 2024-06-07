@@ -37,10 +37,7 @@
 .center-nav ul li:hover::after{
     width: 80%;
 }
-.arrow{
-    transform: rotate(-20deg);
-    font-size: 18px;
-}
+
 
 .nav-links{
     color: #fff;

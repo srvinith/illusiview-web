@@ -1,0 +1,186 @@
+@media screen and (min-width:320px) and (max-width:480px) {
+
+    .nav {
+        padding: 10px 0;
+    }
+
+    .logo {
+        display: none;
+    }
+
+
+
+    /* ============= hamburger=========== */
+    .hamburger {
+        height: 30px;
+        width: 30px;
+        transform: 0.2s;
+        position: relative;
+        display: block;
+        margin-bottom: 10px;
+
+    }
+
+    .hamburger .checkbox {
+        position: absolute;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .line {
+        transition: 0.5s;
+        stroke-width: 4px;
+        stroke: #fff;
+    }
+
+    .lineTop {
+        stroke-dasharray: 40 40;
+        stroke-dashoffset: 25;
+    }
+
+    .lineBottom {
+        stroke-dasharray: 40 40;
+        stroke-dashoffset: 60;
+    }
+
+    .lineMid {
+        stroke-dasharray: 40 40;
+    }
+
+    .hamburger .checkbox:checked+svg .line {
+        stroke: #f05a43;
+    }
+
+    .hamburger .checkbox:checked+svg .lineTop {
+        stroke-dashoffset: 0;
+        transform-origin: left;
+        transform: rotateZ(45deg) translate(-7px, -5px);
+    }
+
+    .hamburger .checkbox:checked+svg .lineMid {
+        stroke-dashoffset: 40;
+    }
+
+    .hamburger .checkbox:checked+svg .lineBottom {
+        stroke-dashoffset: 0;
+        transform-origin: left;
+        transform: rotateZ(-45deg) translate(-5px, 5px);
+    }
+
+    /* ============= hamburger=========== */
+
+    .mob-ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-button {
+        background-color: var(--btn-bg);
+        padding: 3px 5px !important;
+        font-size: 14px !important;
+        position: relative;
+    }
+
+    .arrow {
+        transform: rotate(-20deg);
+        font-size: 14px;
+    }
+
+    .hero-sec {
+        padding: 0 20px;
+    }
+
+    .hero-sec h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+        font-family: "neo-bold" serif !important;
+    }
+
+    .hero-sec h3 {
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .our-vision-content {
+        color: #fff;
+        height: 80vh;
+        display: flex;
+        align-items: self-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .our-vision-content h2 {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .our-vision-content p {
+        width: 90%;
+        line-height: 25px;
+        font-size: 14px;
+    }
+
+    .arrow-rot {
+        transform: rotate(-30deg) !important;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    .vison-ele {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .ele {
+        width: 75px;
+        height: 75px;
+        animation: rotate 15s infinite;
+        transition: 5s ease-in-out;
+    }
+
+    .experince-sec {
+        height: 50vh;
+    }
+
+    .exp-content {
+        flex-direction: column;
+    }
+
+    .exp-text {
+        width: 90%;
+        padding: 0px 0 0 10px;
+    }
+
+    .exp-text h2 {
+        width: 100%;
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    .exp-text p {
+        width: 100%;
+    }
+
+    .exp-img {
+        width: 100%;
+    }
+
+    .exp-ele {
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+    }
+    .center-who-content {
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+
+}
