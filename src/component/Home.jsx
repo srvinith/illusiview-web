@@ -14,7 +14,8 @@ import marq2 from '../assets/images/marq-2.png'
 import vr from '../assets/images/vr.png'
 import show1 from '../assets/images/show-1.png'
 import box from '../assets/images/box.png'
-
+import articleImg from '../assets/images/flex-img.png'
+import fone from '../assets/images/fl-img.png'
 import HoverCon from './HoverCon';
 import Testimonial from './Testimonial';
 
@@ -83,19 +84,22 @@ const Home = () => {
                                 <img src={child1} alt="child" className='img-fluid child1' />
                                 <img src={child2} alt="child" className='img-fluid child2' />
                             </div>
-                            <div className="row mt-5">
-                                <div className="col-md-6">
-                                    <div className="virtual-img">
-                                        <img src={virtualImg} alt="virtualImg" className='img-fluid' />
+                            <div className="mob-con-virtual">
+                                <div className="row mt-5">
+                                    <div className="col-md-6">
+                                        <div className="virtual-img">
+                                            <img src={virtualImg} alt="virtualImg" className='img-fluid' />
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <p className='md-fs-6 mt-3'>(AR) and Virtual Reality (VR) are immersive technologies that blend digital content with the real world (AR) or create entirely virtual environments (VR). These technologies are essential for kids as they offer interactive and experiential learning opportunities.</p>
+
+                                        <div className="read-more w-bg text-clr fs-4">Read more <FaArrowRightLong className='arrow-rot' /></div>
+
                                     </div>
                                 </div>
-                                <div className="col-md-6">
-                                    <p className='md-fs-6'>(AR) and Virtual Reality (VR) are immersive technologies that blend digital content with the real world (AR) or create entirely virtual environments (VR). These technologies are essential for kids as they offer interactive and experiential learning opportunities.</p>
-
-                                    <div className="read-more w-bg text-clr fs-4">Read more <FaArrowRightLong className='arrow-rot' /></div>
-
-                                </div>
                             </div>
+
                         </div>
                     </div>
                 </section>
@@ -142,12 +146,12 @@ const Home = () => {
                     <div className="marquee-sec">
                         <center><h3 className='marquee-center'>They  trusted  us</h3></center>
 
-                        <div className="marq-container my-5">
+                        <div className="marq-container md:my-2 my-5">
                             <marquee direction='left' >
-                                <img src={marq1} alt="marq1" className='img-fluid my-4' />
+                                <img src={marq1} alt="marq1" className='img-fluid md:my-1 my-4' />
                             </marquee>
                             <marquee direction='right'>
-                                <img src={marq2} alt="marq2" className='img-fluid my-4' />
+                                <img src={marq2} alt="marq2" className='img-fluid md:my-1 my-4' />
                             </marquee>
                         </div>
                     </div>
@@ -221,17 +225,72 @@ const Home = () => {
                                 <p className='testi-bor-text'>They already love our products </p>
                                 <h2 className='testi-titl'>See what our users say about us</h2>
                             </center>
-                            <Testimonial/>
+                            <Testimonial />
                         </div>
 
                     </div>
                 </section>
 
                 <section>
-                    <div className="latest-articel-sec">
-                        <p>lorem</p>
+                    <div className="latest-article-sec">
+                        <center><h3 className='marquee-center text-white'>Latest   Articles</h3></center>
+                        <div className="sec-article">
+                            <img src={articleImg} alt="article-bg" className=' img-fluid bg-article' />
+
+                            <div className="container mt-5">
+                                <div className="f-con">
+                                    <div className=" f f-1">
+                                        <img src={fone} alt="fone" className='img-fluid' />
+                                        <div className="flex-text">
+                                            <h3>Donec a neque a ligula</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor turpis,
+                                                dictum a efficitur in, aliquam eget velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor turpis, dictum a efficitur in, aliquam eget velit.</p>
+
+                                        </div>
+                                    </div>
+                                    <div className=" f f-2">
+                                        <img src={fone} alt="fone" className='img-fluid' />
+                                        <div className="flex-text">
+                                            <h3>Donec a neque a ligula</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor turpis,
+                                                dictum a efficitur in, aliquam eget velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor turpis, dictum a efficitur in, aliquam eget velit.</p>
+
+                                        </div>
+                                    </div>
+                                    <div className=" f f-3">
+                                        <img src={fone} alt="fone" className='img-fluid' />
+                                        <div className="flex-text">
+                                            <h3>Donec a neque a ligula</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor turpis,
+                                                dictum a efficitur in, aliquam eget velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor turpis, dictum a efficitur in, aliquam eget velit.</p>
+
+                                        </div>
+                                    </div>
+                                    <div className=" f f-4">
+                                        <img src={fone} alt="fone" className='img-fluid' />
+                                        <div className="flex-text">
+                                            <h3>Donec a neque a ligula</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor turpis,
+                                                dictum a efficitur in, aliquam eget velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor turpis, dictum a efficitur in, aliquam eget velit.</p>
+
+                                        </div>
+                                    </div>
+                                    <div className=" f f-5">
+                                        <img src={fone} alt="fone" className='img-fluid' />
+                                        <div className="flex-text">
+                                            <h3>Donec a neque a ligula</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor turpis,
+                                                dictum a efficitur in, aliquam eget velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dolor turpis, dictum a efficitur in, aliquam eget velit.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
+
+               
 
             </div >
         </>

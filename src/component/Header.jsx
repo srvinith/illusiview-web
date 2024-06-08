@@ -1,66 +1,47 @@
-import React, { useState } from 'react'
-import './Header.css'
-import logo from '../assets/images/logo.png'
-import { FaArrowRightLong } from "react-icons/fa6";
-import { Link } from 'react-router-dom'
+import { useState } from 'react';
+import Container from 'react-bootstrap/Container';
+import logo from '../assets/images/logo.png';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import './Header.css';
+import { FaArrowRight } from "react-icons/fa6";
 
-const Header = () => {
-    const [isChecked, setIsChecked] = useState(false);
-    const handleCheckboxChange = (event) => {
-        setIsChecked(event.target.checked);
-    };
-    return (
-        <>
-            <div className="header">
-                <div className="container">
-                    <div className="nav">
-                        <div className="logo">
-                            <img src={logo} alt="logo" className='img-fluid' />
-                        </div>
-                        <div className="center-nav">
-                            <div class="hamburger">
-                                <input class="checkbox" type="checkbox" checked={isChecked}
-                                    onChange={handleCheckboxChange} />
-                                <svg fill="none" viewBox="0 0 50 50" height="50" width="50">
-                                    <path
-                                        class="lineTop line"
-                                        stroke-linecap="round"
-                                        stroke-width="4"
-                                        stroke="white"
-                                        d="M6 11L44 11"
-                                    ></path>
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-width="4"
-                                        stroke="white"
-                                        d="M6 24H43"
-                                        class="lineMid line"
-                                    ></path>
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-width="4"
-                                        stroke="white"
-                                        d="M6 37H43"
-                                        class="lineBottom line"
-                                    ></path>
-                                </svg>
-                            </div>
-                            {isChecked &&
-                                <ul className='mob-ul'>
-                                <li><Link className='nav-links'>What we do</Link></li>
-                                <li><Link className='nav-links'>Who we are</Link></li>
-                                <li><Link className='nav-links'>Insights</Link></li>
-                            </ul>
-                            }
-                        </div>
-                        <div className="nav-button">
-                            Let’s Talk <FaArrowRightLong className='arrow' />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+function NavScrollExample() {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleToggle = () => {
+    setExpanded(!expanded);
+  };
+
+  const handleNavItemClick = () => {
+    setExpanded(false);
+  };
+
+  return (
+    <Navbar expanded={expanded} expand="lg" className="header fixed-top p-0 m-0">
+      <Container fluid>
+        <Navbar.Brand href="#"><img src={logo} alt="logo" className='img-fluid logo' /></Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" onClick={handleToggle} className="button-menu border-0">
+          <label className="hamburger">
+            <input type="checkbox" checked={expanded} onChange={handleToggle} />
+            <svg viewBox="0 0 32 32">
+              <path className="line line-top-bottom" d="M27 10H13C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2s4 1.8 4 4v20c0 2.2 1.8 4 4 4s4-1.8 4-4-1.8-4-4-4H7"></path>
+              <path className="line" d="M7 16H27"></path>
+            </svg>
+          </label>
+        </Navbar.Toggle>
+        
+        <Navbar.Collapse id="navbarScroll">
+          <Nav className="mx-auto my-lg-0 nav-con" navbarScroll>
+            <Nav.Link href="#action1" className='nav-links' onClick={handleNavItemClick}>What we do</Nav.Link>
+            <Nav.Link href="#action2" className='nav-links' onClick={handleNavItemClick}>Who we are</Nav.Link>
+            <Nav.Link href="#action3" className='nav-links' onClick={handleNavItemClick}>Insights</Nav.Link>
+          </Nav>
+          <button className='nav-button'>Let's Talk < FaArrowRight className='arrow'/></button>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default Header
+export default NavScrollExample;
